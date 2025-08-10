@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/APBData/GameEngine/build_new/cmake_install.cmake",
+		"E:/APBData/GameEngine/build_new/_deps/raylib-build/cmake_install.cmake",
+		"E:/APBData/GameEngine/build_new/_deps/raylib-build/raylib/cmake_install.cmake",
+		"E:/APBData/GameEngine/build_new/_deps/raylib-build/raylib/external/glfw/cmake_install.cmake",
+		"E:/APBData/GameEngine/build_new/_deps/raylib-build/raylib/external/glfw/src/cmake_install.cmake",
+		"E:/APBData/GameEngine/build_new/_deps/enet-build/cmake_install.cmake",
+		"E:/APBData/GameEngine/build_new/_deps/entt-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

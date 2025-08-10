@@ -1,0 +1,14 @@
+# CMake generation dependency list for this directory.
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/CMakeDependentOption.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/CMakePackageConfigHelpers.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/CheckIncludeFile.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/CheckLibraryExists.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/FindPackageMessage.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/FindThreads.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/GNUInstallDirs.cmake
+C:/Users/abrown28/scoop/apps/cmake/current/share/cmake-4.1/Modules/WriteBasicConfigVersionFile.cmake
+E:/APBData/GameEngine/build_new/_deps/raylib-src/src/external/glfw/CMake/glfw3Config.cmake.in
+E:/APBData/GameEngine/build_new/_deps/raylib-src/src/external/glfw/CMakeLists.txt
