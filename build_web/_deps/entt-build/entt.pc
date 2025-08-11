@@ -1,0 +1,8 @@
+prefix=/home/abrown28/emsdk/upstream/emscripten/cache/sysroot
+includedir=${prefix}/include
+
+Name: EnTT
+Description: Gaming meets modern C++
+Url: https://github.com/skypjack/entt
+Version: 3.12.2
+Cflags: -I${includedir}

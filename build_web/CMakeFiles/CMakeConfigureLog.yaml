@@ -1,0 +1,1329 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+    searched_directories:
+      - "/home/abrown28/emsdk/uname"
+      - "/home/abrown28/emsdk/upstream/emscripten/uname"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:207 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The target system is: Emscripten - 1 - x86
+      The host system is: Linux - 6.14.0-27-generic - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/gmake"
+      - "/home/abrown28/emsdk/upstream/emscripten/gmake"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/gmake"
+      - "/usr/local/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/usr/sbin/gmake"
+    found: "/usr/bin/gmake"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-strip"
+      - "strip"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/llvm-strip"
+      - "/home/abrown28/emsdk/llvm-strip"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/llvm-strip"
+      - "/usr/local/sbin/llvm-strip"
+      - "/usr/local/bin/llvm-strip"
+      - "/usr/sbin/llvm-strip"
+      - "/usr/bin/llvm-strip"
+      - "/sbin/llvm-strip"
+      - "/bin/llvm-strip"
+      - "/usr/games/llvm-strip"
+      - "/usr/local/games/llvm-strip"
+      - "/snap/bin/llvm-strip"
+      - "/home/abrown28/.dotnet/tools/llvm-strip"
+      - "/bin/llvm-strip"
+      - "/sbin/llvm-strip"
+      - "/home/abrown28/emsdk/upstream/emscripten/strip"
+      - "/home/abrown28/emsdk/strip"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/strip"
+      - "/usr/local/sbin/strip"
+      - "/usr/local/bin/strip"
+      - "/usr/sbin/strip"
+    found: "/usr/bin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld.lld"
+      - "ld"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/ld.lld"
+      - "/home/abrown28/emsdk/ld.lld"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/ld.lld"
+      - "/usr/local/sbin/ld.lld"
+      - "/usr/local/bin/ld.lld"
+      - "/usr/sbin/ld.lld"
+      - "/usr/bin/ld.lld"
+      - "/sbin/ld.lld"
+      - "/bin/ld.lld"
+      - "/usr/games/ld.lld"
+      - "/usr/local/games/ld.lld"
+      - "/snap/bin/ld.lld"
+      - "/home/abrown28/.dotnet/tools/ld.lld"
+      - "/bin/ld.lld"
+      - "/sbin/ld.lld"
+      - "/home/abrown28/emsdk/upstream/emscripten/ld"
+      - "/home/abrown28/emsdk/ld"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/ld"
+      - "/usr/local/sbin/ld"
+      - "/usr/local/bin/ld"
+      - "/usr/sbin/ld"
+    found: "/usr/bin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-objdump"
+      - "objdump"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/llvm-objdump"
+      - "/home/abrown28/emsdk/llvm-objdump"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/llvm-objdump"
+      - "/usr/local/sbin/llvm-objdump"
+      - "/usr/local/bin/llvm-objdump"
+      - "/usr/sbin/llvm-objdump"
+      - "/usr/bin/llvm-objdump"
+      - "/sbin/llvm-objdump"
+      - "/bin/llvm-objdump"
+      - "/usr/games/llvm-objdump"
+      - "/usr/local/games/llvm-objdump"
+      - "/snap/bin/llvm-objdump"
+      - "/home/abrown28/.dotnet/tools/llvm-objdump"
+      - "/bin/llvm-objdump"
+      - "/sbin/llvm-objdump"
+      - "/home/abrown28/emsdk/upstream/emscripten/objdump"
+      - "/home/abrown28/emsdk/objdump"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/objdump"
+      - "/usr/local/sbin/objdump"
+      - "/usr/local/bin/objdump"
+      - "/usr/sbin/objdump"
+    found: "/usr/bin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-objcopy"
+      - "objcopy"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/llvm-objcopy"
+      - "/home/abrown28/emsdk/llvm-objcopy"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/llvm-objcopy"
+      - "/usr/local/sbin/llvm-objcopy"
+      - "/usr/local/bin/llvm-objcopy"
+      - "/usr/sbin/llvm-objcopy"
+      - "/usr/bin/llvm-objcopy"
+      - "/sbin/llvm-objcopy"
+      - "/bin/llvm-objcopy"
+      - "/usr/games/llvm-objcopy"
+      - "/usr/local/games/llvm-objcopy"
+      - "/snap/bin/llvm-objcopy"
+      - "/home/abrown28/.dotnet/tools/llvm-objcopy"
+      - "/bin/llvm-objcopy"
+      - "/sbin/llvm-objcopy"
+      - "/home/abrown28/emsdk/upstream/emscripten/objcopy"
+      - "/home/abrown28/emsdk/objcopy"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/objcopy"
+      - "/usr/local/sbin/objcopy"
+      - "/usr/local/bin/objcopy"
+      - "/usr/sbin/objcopy"
+    found: "/usr/bin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-readelf"
+      - "readelf"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/llvm-readelf"
+      - "/home/abrown28/emsdk/llvm-readelf"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/llvm-readelf"
+      - "/usr/local/sbin/llvm-readelf"
+      - "/usr/local/bin/llvm-readelf"
+      - "/usr/sbin/llvm-readelf"
+      - "/usr/bin/llvm-readelf"
+      - "/sbin/llvm-readelf"
+      - "/bin/llvm-readelf"
+      - "/usr/games/llvm-readelf"
+      - "/usr/local/games/llvm-readelf"
+      - "/snap/bin/llvm-readelf"
+      - "/home/abrown28/.dotnet/tools/llvm-readelf"
+      - "/bin/llvm-readelf"
+      - "/sbin/llvm-readelf"
+      - "/home/abrown28/emsdk/upstream/emscripten/readelf"
+      - "/home/abrown28/emsdk/readelf"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/readelf"
+      - "/usr/local/sbin/readelf"
+      - "/usr/local/bin/readelf"
+      - "/usr/sbin/readelf"
+    found: "/usr/bin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/llvm-dlltool"
+      - "/home/abrown28/emsdk/llvm-dlltool"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/llvm-dlltool"
+      - "/usr/local/sbin/llvm-dlltool"
+      - "/usr/local/bin/llvm-dlltool"
+      - "/usr/sbin/llvm-dlltool"
+      - "/usr/bin/llvm-dlltool"
+      - "/sbin/llvm-dlltool"
+      - "/bin/llvm-dlltool"
+      - "/usr/games/llvm-dlltool"
+      - "/usr/local/games/llvm-dlltool"
+      - "/snap/bin/llvm-dlltool"
+      - "/home/abrown28/.dotnet/tools/llvm-dlltool"
+      - "/bin/llvm-dlltool"
+      - "/sbin/llvm-dlltool"
+      - "/home/abrown28/emsdk/upstream/emscripten/dlltool"
+      - "/home/abrown28/emsdk/dlltool"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/usr/bin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/games/dlltool"
+      - "/usr/local/games/dlltool"
+      - "/snap/bin/dlltool"
+      - "/home/abrown28/.dotnet/tools/dlltool"
+      - "/bin/dlltool"
+      - "/sbin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "llvm-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/llvm-addr2line"
+      - "/home/abrown28/emsdk/llvm-addr2line"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/llvm-addr2line"
+      - "/usr/local/sbin/llvm-addr2line"
+      - "/usr/local/bin/llvm-addr2line"
+      - "/usr/sbin/llvm-addr2line"
+      - "/usr/bin/llvm-addr2line"
+      - "/sbin/llvm-addr2line"
+      - "/bin/llvm-addr2line"
+      - "/usr/games/llvm-addr2line"
+      - "/usr/local/games/llvm-addr2line"
+      - "/snap/bin/llvm-addr2line"
+      - "/home/abrown28/.dotnet/tools/llvm-addr2line"
+      - "/bin/llvm-addr2line"
+      - "/sbin/llvm-addr2line"
+      - "/home/abrown28/emsdk/upstream/emscripten/addr2line"
+      - "/home/abrown28/emsdk/addr2line"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/addr2line"
+      - "/usr/local/sbin/addr2line"
+      - "/usr/local/bin/addr2line"
+      - "/usr/sbin/addr2line"
+    found: "/usr/bin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/tapi"
+      - "/home/abrown28/emsdk/tapi"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/usr/bin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
+      - "/usr/games/tapi"
+      - "/usr/local/games/tapi"
+      - "/snap/bin/tapi"
+      - "/home/abrown28/.dotnet/tools/tapi"
+      - "/bin/tapi"
+      - "/sbin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/Compiler/Clang-FindBinUtils.cmake:50 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_CLANG_SCAN_DEPS"
+    description: "`clang-scan-deps` dependency scanner"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "clang-scan-deps-22.0"
+      - "clang-scan-deps-22"
+      - "clang-scan-deps22"
+      - "clang-scan-deps"
+    candidate_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/upstream/emscripten/clang-scan-deps-22.0"
+      - "/home/abrown28/emsdk/clang-scan-deps-22.0"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/clang-scan-deps-22.0"
+      - "/usr/local/sbin/clang-scan-deps-22.0"
+      - "/usr/local/bin/clang-scan-deps-22.0"
+      - "/usr/sbin/clang-scan-deps-22.0"
+      - "/usr/bin/clang-scan-deps-22.0"
+      - "/sbin/clang-scan-deps-22.0"
+      - "/bin/clang-scan-deps-22.0"
+      - "/usr/games/clang-scan-deps-22.0"
+      - "/usr/local/games/clang-scan-deps-22.0"
+      - "/snap/bin/clang-scan-deps-22.0"
+      - "/home/abrown28/.dotnet/tools/clang-scan-deps-22.0"
+      - "/bin/clang-scan-deps-22.0"
+      - "/sbin/clang-scan-deps-22.0"
+      - "/home/abrown28/emsdk/upstream/emscripten/clang-scan-deps-22"
+      - "/home/abrown28/emsdk/clang-scan-deps-22"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/clang-scan-deps-22"
+      - "/usr/local/sbin/clang-scan-deps-22"
+      - "/usr/local/bin/clang-scan-deps-22"
+      - "/usr/sbin/clang-scan-deps-22"
+      - "/usr/bin/clang-scan-deps-22"
+      - "/sbin/clang-scan-deps-22"
+      - "/bin/clang-scan-deps-22"
+      - "/usr/games/clang-scan-deps-22"
+      - "/usr/local/games/clang-scan-deps-22"
+      - "/snap/bin/clang-scan-deps-22"
+      - "/home/abrown28/.dotnet/tools/clang-scan-deps-22"
+      - "/bin/clang-scan-deps-22"
+      - "/sbin/clang-scan-deps-22"
+      - "/home/abrown28/emsdk/upstream/emscripten/clang-scan-deps22"
+      - "/home/abrown28/emsdk/clang-scan-deps22"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/clang-scan-deps22"
+      - "/usr/local/sbin/clang-scan-deps22"
+      - "/usr/local/bin/clang-scan-deps22"
+      - "/usr/sbin/clang-scan-deps22"
+      - "/usr/bin/clang-scan-deps22"
+      - "/sbin/clang-scan-deps22"
+      - "/bin/clang-scan-deps22"
+      - "/usr/games/clang-scan-deps22"
+      - "/usr/local/games/clang-scan-deps22"
+      - "/snap/bin/clang-scan-deps22"
+      - "/home/abrown28/.dotnet/tools/clang-scan-deps22"
+      - "/bin/clang-scan-deps22"
+      - "/sbin/clang-scan-deps22"
+      - "/home/abrown28/emsdk/upstream/emscripten/clang-scan-deps"
+      - "/home/abrown28/emsdk/clang-scan-deps"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/clang-scan-deps"
+      - "/usr/local/sbin/clang-scan-deps"
+      - "/usr/local/bin/clang-scan-deps"
+      - "/usr/sbin/clang-scan-deps"
+      - "/usr/bin/clang-scan-deps"
+      - "/sbin/clang-scan-deps"
+      - "/bin/clang-scan-deps"
+      - "/usr/games/clang-scan-deps"
+      - "/usr/local/games/clang-scan-deps"
+      - "/snap/bin/clang-scan-deps"
+      - "/home/abrown28/.dotnet/tools/clang-scan-deps"
+      - "/bin/clang-scan-deps"
+      - "/sbin/clang-scan-deps"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/FindGit.cmake:86 (find_program)"
+      - "/usr/share/cmake-4.1/Modules/FetchContent.cmake:1874 (find_package)"
+      - "/usr/share/cmake-4.1/Modules/FetchContent.cmake:1609 (__FetchContent_populateSubbuild)"
+      - "/usr/share/cmake-4.1/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)"
+      - "/usr/share/cmake-4.1/Modules/FetchContent.cmake:2145 (cmake_language)"
+      - "/usr/share/cmake-4.1/Modules/FetchContent.cmake:2384 (__FetchContent_Populate)"
+      - "CMakeLists.txt:41 (FetchContent_MakeAvailable)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "/home/abrown28/emsdk/"
+      - "/home/abrown28/emsdk/upstream/emscripten/"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/snap/bin/"
+      - "/home/abrown28/.dotnet/tools/"
+      - "/bin/"
+      - "/sbin/"
+    searched_directories:
+      - "/home/abrown28/emsdk/git"
+      - "/home/abrown28/emsdk/upstream/emscripten/git"
+      - "/home/abrown28/.nvm/versions/node/v22.16.0/bin/git"
+      - "/usr/local/sbin/git"
+      - "/usr/local/bin/git"
+      - "/usr/sbin/git"
+    found: "/usr/bin/git"
+    search_context:
+      ENV{PATH}:
+        - "/home/abrown28/emsdk"
+        - "/home/abrown28/emsdk/upstream/emscripten"
+        - "/home/abrown28/.nvm/versions/node/v22.16.0/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/abrown28/.dotnet/tools"
+      CMAKE_INSTALL_PREFIX: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/"
+        - "/"
+        - "/"
+        - "/"
+        - "/"
+      CMAKE_FIND_ROOT_PATH: "/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot;/home/abrown28/emsdk/upstream/emscripten/cache/sysroot"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.1/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-4.1/Modules/CheckCCompilerFlag.cmake:105 (cmake_check_compiler_flag)"
+      - "build_web/_deps/raylib-src/cmake/AddIfFlagCompiles.cmake:3 (CHECK_C_COMPILER_FLAG)"
+      - "build_web/_deps/raylib-src/cmake/CompilerFlags.cmake:5 (add_if_flag_compiles)"
+      - "build_web/_deps/raylib-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Performing Test COMPILER_HAS_THOSE_TOGGLES"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-okGZIh"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-okGZIh"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/Projects/gameengine/build_web/_deps/raylib-src/cmake"
+    buildResult:
+      variable: "COMPILER_HAS_THOSE_TOGGLES"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-okGZIh'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_76066/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_76066.dir/build.make CMakeFiles/cmTC_76066.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-okGZIh'
+        Building C object CMakeFiles/cmTC_76066.dir/src.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc -DCOMPILER_HAS_THOSE_TOGGLES  -Werror=pointer-arith -MD -MT CMakeFiles/cmTC_76066.dir/src.c.o -MF CMakeFiles/cmTC_76066.dir/src.c.o.d -o CMakeFiles/cmTC_76066.dir/src.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-okGZIh/src.c
+        Linking C executable cmTC_76066.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76066.dir/link.txt --verbose=1
+        /home/abrown28/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_76066.dir/objects1.rsp -o cmTC_76066.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-okGZIh'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:9 (check_function_exists)"
+    checks:
+      - "Looking for fcntl"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-xKSK6v"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-xKSK6v"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_FCNTL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-xKSK6v'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_83b50/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_83b50.dir/build.make CMakeFiles/cmTC_83b50.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-xKSK6v'
+        Building C object CMakeFiles/cmTC_83b50.dir/CheckFunctionExists.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc   -DCHECK_FUNCTION_EXISTS=fcntl -MD -MT CMakeFiles/cmTC_83b50.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_83b50.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_83b50.dir/CheckFunctionExists.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-xKSK6v/CheckFunctionExists.c
+        Linking C executable cmTC_83b50.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83b50.dir/link.txt --verbose=1
+        wasm-ld: warning: function signature mismatch: fcntl
+        >>> defined as () -> i32 in CMakeFiles/cmTC_83b50.dir/CheckFunctionExists.c.o
+        >>> defined as (i32, i32, i32) -> i32 in /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(fcntl.o)
+        /home/abrown28/emsdk/upstream/emscripten/emcc  -DCHECK_FUNCTION_EXISTS=fcntl @CMakeFiles/cmTC_83b50.dir/objects1.rsp -o cmTC_83b50.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-xKSK6v'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:10 (check_function_exists)"
+    checks:
+      - "Looking for poll"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-4RCMf9"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-4RCMf9"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_POLL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-4RCMf9'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ac290/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ac290.dir/build.make CMakeFiles/cmTC_ac290.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-4RCMf9'
+        Building C object CMakeFiles/cmTC_ac290.dir/CheckFunctionExists.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc   -DCHECK_FUNCTION_EXISTS=poll -MD -MT CMakeFiles/cmTC_ac290.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_ac290.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_ac290.dir/CheckFunctionExists.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-4RCMf9/CheckFunctionExists.c
+        Linking C executable cmTC_ac290.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac290.dir/link.txt --verbose=1
+        wasm-ld: warning: function signature mismatch: poll
+        >>> defined as () -> i32 in CMakeFiles/cmTC_ac290.dir/CheckFunctionExists.c.o
+        >>> defined as (i32, i32, i32) -> i32 in /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(poll.o)
+        /home/abrown28/emsdk/upstream/emscripten/emcc  -DCHECK_FUNCTION_EXISTS=poll @CMakeFiles/cmTC_ac290.dir/objects1.rsp -o cmTC_ac290.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-4RCMf9'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:11 (check_function_exists)"
+    checks:
+      - "Looking for getaddrinfo"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-D1f7aW"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-D1f7aW"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_GETADDRINFO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-D1f7aW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b2b60/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b2b60.dir/build.make CMakeFiles/cmTC_b2b60.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-D1f7aW'
+        Building C object CMakeFiles/cmTC_b2b60.dir/CheckFunctionExists.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc   -DCHECK_FUNCTION_EXISTS=getaddrinfo -MD -MT CMakeFiles/cmTC_b2b60.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_b2b60.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_b2b60.dir/CheckFunctionExists.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-D1f7aW/CheckFunctionExists.c
+        Linking C executable cmTC_b2b60.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2b60.dir/link.txt --verbose=1
+        /home/abrown28/emsdk/upstream/emscripten/emcc  -DCHECK_FUNCTION_EXISTS=getaddrinfo @CMakeFiles/cmTC_b2b60.dir/objects1.rsp -o cmTC_b2b60.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-D1f7aW'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:12 (check_function_exists)"
+    checks:
+      - "Looking for getnameinfo"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-73wJbG"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-73wJbG"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_GETNAMEINFO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-73wJbG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_64f81/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_64f81.dir/build.make CMakeFiles/cmTC_64f81.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-73wJbG'
+        Building C object CMakeFiles/cmTC_64f81.dir/CheckFunctionExists.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc   -DCHECK_FUNCTION_EXISTS=getnameinfo -MD -MT CMakeFiles/cmTC_64f81.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_64f81.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_64f81.dir/CheckFunctionExists.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-73wJbG/CheckFunctionExists.c
+        Linking C executable cmTC_64f81.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64f81.dir/link.txt --verbose=1
+        /home/abrown28/emsdk/upstream/emscripten/emcc  -DCHECK_FUNCTION_EXISTS=getnameinfo @CMakeFiles/cmTC_64f81.dir/objects1.rsp -o cmTC_64f81.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-73wJbG'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:13 (check_function_exists)"
+    checks:
+      - "Looking for gethostbyname_r"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-Vv9TAM"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-Vv9TAM"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_GETHOSTBYNAME_R"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-Vv9TAM'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b9e1e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b9e1e.dir/build.make CMakeFiles/cmTC_b9e1e.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-Vv9TAM'
+        Building C object CMakeFiles/cmTC_b9e1e.dir/CheckFunctionExists.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc   -DCHECK_FUNCTION_EXISTS=gethostbyname_r -MD -MT CMakeFiles/cmTC_b9e1e.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_b9e1e.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_b9e1e.dir/CheckFunctionExists.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-Vv9TAM/CheckFunctionExists.c
+        Linking C executable cmTC_b9e1e.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9e1e.dir/link.txt --verbose=1
+        wasm-ld: warning: function signature mismatch: gethostbyname_r
+        >>> defined as () -> i32 in CMakeFiles/cmTC_b9e1e.dir/CheckFunctionExists.c.o
+        >>> defined as (i32, i32, i32, i32, i32, i32) -> i32 in /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libsockets.a(gethostbyname_r.o)
+        /home/abrown28/emsdk/upstream/emscripten/emcc  -DCHECK_FUNCTION_EXISTS=gethostbyname_r @CMakeFiles/cmTC_b9e1e.dir/objects1.rsp -o cmTC_b9e1e.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-Vv9TAM'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:14 (check_function_exists)"
+    checks:
+      - "Looking for gethostbyaddr_r"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-tlfNQm"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-tlfNQm"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_GETHOSTBYADDR_R"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-tlfNQm'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6846e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6846e.dir/build.make CMakeFiles/cmTC_6846e.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-tlfNQm'
+        Building C object CMakeFiles/cmTC_6846e.dir/CheckFunctionExists.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc   -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r -MD -MT CMakeFiles/cmTC_6846e.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_6846e.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_6846e.dir/CheckFunctionExists.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-tlfNQm/CheckFunctionExists.c
+        Linking C executable cmTC_6846e.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6846e.dir/link.txt --verbose=1
+        wasm-ld: warning: function signature mismatch: gethostbyaddr_r
+        >>> defined as () -> i32 in CMakeFiles/cmTC_6846e.dir/CheckFunctionExists.c.o
+        >>> defined as (i32, i32, i32, i32, i32, i32, i32, i32) -> i32 in /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libsockets.a(gethostbyaddr_r.o)
+        /home/abrown28/emsdk/upstream/emscripten/emcc  -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r @CMakeFiles/cmTC_6846e.dir/objects1.rsp -o cmTC_6846e.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-tlfNQm'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:15 (check_function_exists)"
+    checks:
+      - "Looking for inet_pton"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-IrQc9N"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-IrQc9N"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_INET_PTON"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-IrQc9N'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1f4af/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1f4af.dir/build.make CMakeFiles/cmTC_1f4af.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-IrQc9N'
+        Building C object CMakeFiles/cmTC_1f4af.dir/CheckFunctionExists.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc   -DCHECK_FUNCTION_EXISTS=inet_pton -MD -MT CMakeFiles/cmTC_1f4af.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_1f4af.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_1f4af.dir/CheckFunctionExists.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-IrQc9N/CheckFunctionExists.c
+        Linking C executable cmTC_1f4af.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f4af.dir/link.txt --verbose=1
+        wasm-ld: warning: function signature mismatch: inet_pton
+        >>> defined as () -> i32 in CMakeFiles/cmTC_1f4af.dir/CheckFunctionExists.c.o
+        >>> defined as (i32, i32, i32) -> i32 in /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(inet_pton.o)
+        /home/abrown28/emsdk/upstream/emscripten/emcc  -DCHECK_FUNCTION_EXISTS=inet_pton @CMakeFiles/cmTC_1f4af.dir/objects1.rsp -o cmTC_1f4af.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-IrQc9N'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:16 (check_function_exists)"
+    checks:
+      - "Looking for inet_ntop"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-yCkHri"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-yCkHri"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_INET_NTOP"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-yCkHri'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2ce12/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2ce12.dir/build.make CMakeFiles/cmTC_2ce12.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-yCkHri'
+        Building C object CMakeFiles/cmTC_2ce12.dir/CheckFunctionExists.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc   -DCHECK_FUNCTION_EXISTS=inet_ntop -MD -MT CMakeFiles/cmTC_2ce12.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_2ce12.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_2ce12.dir/CheckFunctionExists.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-yCkHri/CheckFunctionExists.c
+        Linking C executable cmTC_2ce12.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ce12.dir/link.txt --verbose=1
+        wasm-ld: warning: function signature mismatch: inet_ntop
+        >>> defined as () -> i32 in CMakeFiles/cmTC_2ce12.dir/CheckFunctionExists.c.o
+        >>> defined as (i32, i32, i32, i32) -> i32 in /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(inet_ntop.o)
+        /home/abrown28/emsdk/upstream/emscripten/emcc  -DCHECK_FUNCTION_EXISTS=inet_ntop @CMakeFiles/cmTC_2ce12.dir/objects1.rsp -o cmTC_2ce12.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-yCkHri'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.1/Modules/CheckSourceCompiles.cmake:205 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-4.1/Modules/CheckStructHasMember.cmake:161 (check_source_compiles)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:17 (check_struct_has_member)"
+    checks:
+      - "Performing Test HAS_MSGHDR_FLAGS"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-t20TQI"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-t20TQI"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_MSGHDR_FLAGS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-t20TQI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9807d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9807d.dir/build.make CMakeFiles/cmTC_9807d.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-t20TQI'
+        Building C object CMakeFiles/cmTC_9807d.dir/src.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc -DHAS_MSGHDR_FLAGS   -MD -MT CMakeFiles/cmTC_9807d.dir/src.c.o -MF CMakeFiles/cmTC_9807d.dir/src.c.o.d -o CMakeFiles/cmTC_9807d.dir/src.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-t20TQI/src.c
+        Linking C executable cmTC_9807d.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9807d.dir/link.txt --verbose=1
+        /home/abrown28/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_9807d.dir/objects1.rsp -o cmTC_9807d.js
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeScratch/TryCompile-t20TQI'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules/CheckTypeSize.cmake:114 (try_compile)"
+      - "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules/CheckTypeSize.cmake:239 (__check_type_size_impl)"
+      - "build_web/_deps/enet-src/CMakeLists.txt:19 (check_type_size)"
+    directories:
+      source: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeTmp"
+      binary: "/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/home/abrown28/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules;/home/abrown28/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAVE_HAS_SOCKLEN_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_887a3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_887a3.dir/build.make CMakeFiles/cmTC_887a3.dir/build
+        gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_887a3.dir/HAS_SOCKLEN_T.c.o
+        /home/abrown28/emsdk/upstream/emscripten/emcc    -MD -MT CMakeFiles/cmTC_887a3.dir/HAS_SOCKLEN_T.c.o -MF CMakeFiles/cmTC_887a3.dir/HAS_SOCKLEN_T.c.o.d -o CMakeFiles/cmTC_887a3.dir/HAS_SOCKLEN_T.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CheckTypeSize/HAS_SOCKLEN_T.c
+        Linking C executable cmTC_887a3.js
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_887a3.dir/link.txt --verbose=1
+        /home/abrown28/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_887a3.dir/objects1.rsp -o cmTC_887a3.js @CMakeFiles/cmTC_887a3.dir/linkLibs.rsp
+        gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+...

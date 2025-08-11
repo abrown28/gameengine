@@ -1,0 +1,25 @@
+_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rshapes.c.o: \
+  /home/abrown28/Projects/gameengine/build_web/_deps/raylib-src/src/rshapes.c \
+  /home/abrown28/Projects/gameengine/build_web/_deps/raylib-src/src/raylib.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdarg.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/stdarg.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/stdarg.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/__stdarg_header_macro.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/__stdarg___gnuc_va_list.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/__stdarg_va_list.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/__stdarg_va_arg.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/__stdarg___va_copy.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/__stdarg_va_copy.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/stdbool.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/stdbool.h \
+  /home/abrown28/Projects/gameengine/build_web/_deps/raylib-src/src/config.h \
+  /home/abrown28/Projects/gameengine/build_web/_deps/raylib-src/src/rlgl.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/math.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/abrown28/emsdk/upstream/lib/clang/22/include/float.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/float.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/abrown28/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h

@@ -124,6 +124,9 @@ bool ECSSystem::loadModel3D(entt::entity entity, const std::string& modelPath, f
     
     auto& model3D = registry.get<Model3D>(entity);
     
+    // Debug: Print the model path being loaded
+    std::cout << "Attempting to load model: " << modelPath << std::endl;
+    
     // Load the model
     Model model = LoadModel(modelPath.c_str());
     

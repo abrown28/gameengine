@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.1.0)
+cmake_minimum_required(VERSION 3.10)
 project(GameEngine)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -18,11 +18,26 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/raysan5/raylib.git
     GIT_TAG 5.5
 )
-# Disable building examples, demos, games, and tools to avoid CMake version issues
-set(RAYLIB_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(RAYLIB_BUILD_DEMOS OFF CACHE BOOL "" FORCE)
-set(RAYLIB_BUILD_GAMES OFF CACHE BOOL "" FORCE)
-set(RAYLIB_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
+
+# Configure raylib based on platform
+if(EMSCRIPTEN)
+    # Emscripten-specific raylib settings
+    set(RAYLIB_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+    set(RAYLIB_BUILD_DEMOS OFF CACHE BOOL "" FORCE)
+    set(RAYLIB_BUILD_GAMES OFF CACHE BOOL "" FORCE)
+    set(RAYLIB_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
+    set(PLATFORM Web CACHE STRING "" FORCE)
+    set(GRAPHICS GRAPHICS_API_OPENGL_ES2 CACHE STRING "" FORCE)
+else()
+    # Desktop-specific raylib settings
+    set(RAYLIB_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+    set(RAYLIB_BUILD_DEMOS OFF CACHE BOOL "" FORCE)
+    set(RAYLIB_BUILD_GAMES OFF CACHE BOOL "" FORCE)
+    set(RAYLIB_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
+    set(PLATFORM Desktop CACHE STRING "" FORCE)
+    set(GRAPHICS GRAPHICS_API_OPENGL_33 CACHE STRING "" FORCE)
+endif()
+
 FetchContent_MakeAvailable(raylib)
 
 # Download and build enet
@@ -49,6 +64,45 @@ add_executable(${PROJECT_NAME}
     src/ECS.cpp
 )
 
+# Emscripten target for web deployment
+if(EMSCRIPTEN)
+    add_executable(${PROJECT_NAME}_web
+        src/main.cpp
+        src/Game.cpp
+        src/NetworkManager.cpp
+        src/ECS.cpp
+    )
+    
+    # Set output name for web
+    set_target_properties(${PROJECT_NAME}_web PROPERTIES
+        OUTPUT_NAME ${PROJECT_NAME}
+        SUFFIX ".html"
+    )
+    
+    # Include directories for web target
+    target_include_directories(${PROJECT_NAME}_web PRIVATE 
+        include
+        ${raylib_SOURCE_DIR}/src
+        ${enet_SOURCE_DIR}/include
+        ${entt_SOURCE_DIR}/src
+    )
+    
+    # Link libraries for web target
+    target_link_libraries(${PROJECT_NAME}_web 
+        raylib
+        enet
+        EnTT::EnTT
+    )
+    
+    # Emscripten-specific settings
+    set_target_properties(${PROJECT_NAME}_web PROPERTIES
+        LINK_FLAGS "-s USE_WEBGL2=1 -s FULL_ES3=1 -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap'] -s EXPORTED_FUNCTIONS=['_main'] -s ALLOW_MEMORY_GROWTH=1 -s INITIAL_MEMORY=33554432 -s MAXIMUM_MEMORY=268435456 --preload-file assets@assets"
+    )
+    
+    # Copy assets for web build (in the same directory as the HTML file)
+    file(COPY assets DESTINATION ${CMAKE_BINARY_DIR})
+endif()
+
 # Include directories
 target_include_directories(${PROJECT_NAME} PRIVATE 
     include
@@ -65,7 +119,14 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 # Platform-specific settings
-if(WIN32)
+if(EMSCRIPTEN)
+    # Emscripten-specific settings for web target
+    target_compile_definitions(${PROJECT_NAME}_web PRIVATE
+        __EMSCRIPTEN__
+        PLATFORM_WEB
+        GRAPHICS_API_OPENGL_ES2
+    )
+elseif(WIN32)
     target_link_libraries(${PROJECT_NAME} winmm ws2_32)
     # Define preprocessor macros to avoid Windows API conflicts
     target_compile_definitions(${PROJECT_NAME} PRIVATE

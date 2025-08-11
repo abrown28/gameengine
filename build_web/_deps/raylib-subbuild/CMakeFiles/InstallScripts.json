@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/abrown28/Projects/gameengine/build_web/_deps/raylib-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

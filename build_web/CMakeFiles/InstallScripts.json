@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/abrown28/Projects/gameengine/build_web/cmake_install.cmake",
+		"/home/abrown28/Projects/gameengine/build_web/_deps/raylib-build/cmake_install.cmake",
+		"/home/abrown28/Projects/gameengine/build_web/_deps/raylib-build/raylib/cmake_install.cmake",
+		"/home/abrown28/Projects/gameengine/build_web/_deps/enet-build/cmake_install.cmake",
+		"/home/abrown28/Projects/gameengine/build_web/_deps/entt-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

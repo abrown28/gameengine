@@ -1,0 +1,15 @@
+Determining size of socklen_t passed with the following output:
+Change Dir: '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_887a3/fast
+/usr/bin/gmake  -f CMakeFiles/cmTC_887a3.dir/build.make CMakeFiles/cmTC_887a3.dir/build
+gmake[1]: Entering directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_887a3.dir/HAS_SOCKLEN_T.c.o
+/home/abrown28/emsdk/upstream/emscripten/emcc    -MD -MT CMakeFiles/cmTC_887a3.dir/HAS_SOCKLEN_T.c.o -MF CMakeFiles/cmTC_887a3.dir/HAS_SOCKLEN_T.c.o.d -o CMakeFiles/cmTC_887a3.dir/HAS_SOCKLEN_T.c.o -c /home/abrown28/Projects/gameengine/build_web/CMakeFiles/CheckTypeSize/HAS_SOCKLEN_T.c
+Linking C executable cmTC_887a3.js
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_887a3.dir/link.txt --verbose=1
+/home/abrown28/emsdk/upstream/emscripten/emcc @CMakeFiles/cmTC_887a3.dir/objects1.rsp -o cmTC_887a3.js @CMakeFiles/cmTC_887a3.dir/linkLibs.rsp
+gmake[1]: Leaving directory '/home/abrown28/Projects/gameengine/build_web/CMakeFiles/CMakeTmp'
+
+
+

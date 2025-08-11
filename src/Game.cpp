@@ -45,8 +45,23 @@ void Game::Initialize() {
     ecsSystem->addComponent(playerEntity, Player{200.0f, "Player"});
     ecsSystem->addComponent(playerEntity, Networked{});
     
+    // Debug: Check which platform we're on
+    #ifdef __EMSCRIPTEN__
+        std::cout << "DEBUG: __EMSCRIPTEN__ is defined!" << std::endl;
+    #else
+        std::cout << "DEBUG: __EMSCRIPTEN__ is NOT defined!" << std::endl;
+    #endif
+    
     // Load the alien model
-    if (!ecsSystem->loadModel3D(playerEntity, "assets/Models/OBJ format/alien.obj", 50.0f)) {
+    #ifdef __EMSCRIPTEN__
+        // In web builds, the path is relative to the preloaded assets root
+        std::cout << "EMSCRIPTEN: Loading alien model from: Models/OBJ format/alien.obj" << std::endl;
+        if (!ecsSystem->loadModel3D(playerEntity, "/assets/Models/OBJ format/alien.obj", 50.0f)) {
+    #else
+        // In desktop builds, use the full assets path
+        std::cout << "DESKTOP: Loading alien model from: assets/Models/OBJ format/alien.obj" << std::endl;
+        if (!ecsSystem->loadModel3D(playerEntity, "assets/Models/OBJ format/alien.obj", 50.0f)) {
+    #endif
         std::cout << "Warning: Could not load alien model, falling back to 2D circle" << std::endl;
         // Fallback to 2D circle if model loading fails
         ecsSystem->removeComponent<Model3D>(playerEntity);
@@ -143,7 +158,7 @@ void Game::Render() {
     
     // ECS info
     if (ecsSystem) {
-        auto entityCount = ecsSystem->getRegistry().size();
+        auto entityCount = ecsSystem->getRegistry().storage<entt::entity>().size();
         DrawText(TextFormat("Entities: %zu", entityCount), 10, 100, 16, WHITE);
     }
     
