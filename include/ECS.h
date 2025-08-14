@@ -47,6 +47,13 @@ struct Networked {
     std::string lastSyncData = "";
 };
 
+struct CameraFollow {
+    Vector2 target = {0.0f, 0.0f};
+    Vector2 offset = {0.0f, 0.0f};
+    float zoom = 1.0f;
+    float smoothness = 5.0f;  // Camera follow smoothness
+};
+
 // ECS System class
 class ECSSystem {
 public:
@@ -74,6 +81,7 @@ public:
     void updateMovement(float deltaTime);
     void updateRendering();
     void updateNetworkSync();
+    void updateCamera(float deltaTime);
     
     // Model loading
     bool loadModel3D(entt::entity entity, const std::string& modelPath, float scale = 1.0f);
@@ -84,9 +92,15 @@ public:
 
     // Registry access
     entt::registry& getRegistry() { return registry; }
+    
+    // Camera helpers
+    Vector2 getCameraOffset() const { return cameraOffset; }
+    void setCameraTarget(entt::entity targetEntity);
 
 private:
     entt::registry registry;
+    Vector2 cameraOffset = {0.0f, 0.0f};
+    entt::entity cameraTarget = entt::null;
 };
 
 // Template implementations

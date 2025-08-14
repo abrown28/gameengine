@@ -24,15 +24,63 @@ void ECSSystem::updateMovement(float deltaTime) {
         // Update rotation
         transform.rotation += velocity.angular * deltaTime;
         
-        // Keep entities in bounds (simple boundary checking)
-        if (transform.position.x < 20.0f) transform.position.x = 20.0f;
-        if (transform.position.x > 780.0f) transform.position.x = 780.0f;
-        if (transform.position.y < 20.0f) transform.position.y = 20.0f;
-        if (transform.position.y > 580.0f) transform.position.y = 580.0f;
+        // Remove screen bounds constraint - let entities move freely in the world
+        // The camera will handle keeping the player visible
     }
 }
 
+void ECSSystem::updateCamera(float deltaTime) {
+    if (cameraTarget == entt::null || !registry.valid(cameraTarget)) {
+        std::cout << "DEBUG: No valid camera target set" << std::endl;
+        return;
+    }
+    std::cout << "DEBUG: Camera target entity ID: " << static_cast<uint32_t>(cameraTarget) << std::endl;
+
+    if (!registry.all_of<ECSTransform>(cameraTarget)) {
+        std::cout << "DEBUG: Camera target entity has no transform component" << std::endl;
+        return;
+    }
+    
+    const auto& targetTransform = registry.get<ECSTransform>(cameraTarget);
+    
+    // Debug: Display target position
+    std::cout << "DEBUG: Target position - X: " << targetTransform.position.x 
+              << ", Y: " << targetTransform.position.y << std::endl;
+    
+    // Calculate the desired camera offset to center the target
+    Vector2 screenCenter = {400.0f, 300.0f}; // Half of 800x600 window
+    Vector2 desiredOffset = {
+        screenCenter.x - targetTransform.position.x,
+        screenCenter.y - targetTransform.position.y
+    };
+    
+    // Debug: Display desired camera offset
+    std::cout << "DEBUG: Desired camera offset - X: " << desiredOffset.x 
+              << ", Y: " << desiredOffset.y << std::endl;
+    
+    // Smoothly interpolate camera offset
+    float smoothFactor = 5.0f * deltaTime;
+    cameraOffset.x += (desiredOffset.x - cameraOffset.x) * smoothFactor;
+    cameraOffset.y += (desiredOffset.y - cameraOffset.y) * smoothFactor;
+    
+    // Debug: Display current camera offset (actual camera position)
+    std::cout << "DEBUG: Current camera position (offset) - X: " << cameraOffset.x 
+              << ", Y: " << cameraOffset.y << std::endl;
+    
+    // Debug: Display smooth factor and delta time
+    std::cout << "DEBUG: Smooth factor: " << smoothFactor << ", Delta time: " << deltaTime << std::endl;
+    
+    // Debug: Show the difference between desired and current offset
+    std::cout << "DEBUG: Offset difference - X: " << (desiredOffset.x - cameraOffset.x) 
+              << ", Y: " << (desiredOffset.y - cameraOffset.y) << std::endl;
+    std::cout << "DEBUG: Screen center: (" << screenCenter.x << ", " << screenCenter.y << ")" << std::endl;
+    std::cout << "---" << std::endl;
+}
+
 void ECSSystem::updateRendering() {
+    // Apply camera offset to all rendering
+    Vector2 cameraPos = cameraOffset;
+    
     // Render entities with ECSTransform and Renderable components (2D)
     auto view2D = registry.view<ECSTransform, Renderable>();
     
@@ -40,12 +88,18 @@ void ECSSystem::updateRendering() {
         const auto& transform = view2D.get<ECSTransform>(entity);
         const auto& renderable = view2D.get<Renderable>(entity);
         
+        // Apply camera offset to position (subtract to move world opposite to camera)
+        Vector2 screenPos = {
+            transform.position.x - cameraPos.x,
+            transform.position.y - cameraPos.y
+        };
+        
         if (renderable.isCircle) {
-            DrawCircleV(transform.position, renderable.radius, renderable.color);
+            DrawCircleV(screenPos, renderable.radius, renderable.color);
         } else {
             Rectangle rect = renderable.rect;
-            rect.x = transform.position.x - rect.width / 2;
-            rect.y = transform.position.y - rect.height / 2;
+            rect.x = screenPos.x - rect.width / 2;
+            rect.y = screenPos.y - rect.height / 2;
             DrawRectangleRec(rect, renderable.color);
         }
     }
@@ -58,8 +112,12 @@ void ECSSystem::updateRendering() {
         const auto& model3D = view3D.get<Model3D>(entity);
         
         if (model3D.isLoaded) {
-            // Draw the 3D model
-            Vector3 modelPos = { transform.position.x, transform.position.y, 0.0f };
+            // Apply camera offset to 3D position (subtract to move world opposite to camera)
+            Vector3 modelPos = { 
+                transform.position.x - cameraPos.x, 
+                transform.position.y - cameraPos.y, 
+                0.0f 
+            };
             DrawModel(model3D.model, modelPos, model3D.scale, WHITE);
             
             // Draw wireframe bounding box for debugging
@@ -67,7 +125,12 @@ void ECSSystem::updateRendering() {
             DrawBoundingBox(bbox, RED);
         } else {
             // If model not loaded, draw a placeholder
-            DrawSphere({ transform.position.x, transform.position.y, 0.0f }, 10.0f, YELLOW);
+            Vector3 spherePos = { 
+                transform.position.x - cameraPos.x, 
+                transform.position.y - cameraPos.y, 
+                0.0f 
+            };
+            DrawSphere(spherePos, 10.0f, YELLOW);
         }
     }
     
@@ -78,8 +141,12 @@ void ECSSystem::updateRendering() {
         const auto& transform = viewAlien.get<ECSTransform>(entity);
         const auto& alien = viewAlien.get<Alien3D>(entity);
         
-        // Draw a simple 3D alien using raylib shapes
-        Vector3 alienPos = { transform.position.x, transform.position.y, 0.0f };
+        // Apply camera offset to 3D position (subtract to move world opposite to camera)
+        Vector3 alienPos = { 
+            transform.position.x - cameraPos.x, 
+            transform.position.y - cameraPos.y, 
+            0.0f 
+        };
         
         // Draw alien body (sphere)
         DrawSphere(alienPos, alien.size * 15.0f, alien.color);
@@ -149,4 +216,8 @@ bool ECSSystem::loadModel3D(entt::entity entity, const std::string& modelPath, f
               << ") Max: (" << bbox.max.x << ", " << bbox.max.y << ", " << bbox.max.z << ")" << std::endl;
     
     return true;
+}
+
+void ECSSystem::setCameraTarget(entt::entity targetEntity) {
+    cameraTarget = targetEntity;
 }

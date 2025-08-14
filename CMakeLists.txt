@@ -56,6 +56,32 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(entt)
 
+# Download and build Boost
+FetchContent_Declare(
+    boost
+    GIT_REPOSITORY https://github.com/boostorg/boost.git
+    GIT_TAG boost-1.84.0
+)
+
+# Configure Boost
+set(BOOST_ENABLE_CMAKE ON CACHE BOOL "" FORCE)
+set(BOOST_INSTALL_LIBRARIES ON CACHE BOOL "" FORCE)
+
+# Specify which Boost libraries to build (common ones)
+set(BOOST_LIBRARIES 
+    system
+    filesystem
+    thread
+    chrono
+    date_time
+    regex
+    serialization
+    program_options
+    CACHE STRING "" FORCE
+)
+
+FetchContent_MakeAvailable(boost)
+
 # Add executable
 add_executable(${PROJECT_NAME} 
     src/main.cpp
@@ -85,6 +111,7 @@ if(EMSCRIPTEN)
         ${raylib_SOURCE_DIR}/src
         ${enet_SOURCE_DIR}/include
         ${entt_SOURCE_DIR}/src
+        ${boost_SOURCE_DIR}
     )
     
     # Link libraries for web target
@@ -92,6 +119,14 @@ if(EMSCRIPTEN)
         raylib
         enet
         EnTT::EnTT
+        Boost::system
+        Boost::filesystem
+        Boost::thread
+        Boost::chrono
+        Boost::date_time
+        Boost::regex
+        Boost::serialization
+        Boost::program_options
     )
     
     # Emscripten-specific settings
@@ -109,6 +144,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${raylib_SOURCE_DIR}/src
     ${enet_SOURCE_DIR}/include
     ${entt_SOURCE_DIR}/src
+    ${boost_SOURCE_DIR}
 )
 
 # Link libraries
@@ -116,6 +152,14 @@ target_link_libraries(${PROJECT_NAME}
     raylib
     enet
     EnTT::EnTT
+    Boost::system
+    Boost::filesystem
+    Boost::thread
+    Boost::chrono
+    Boost::date_time
+    Boost::regex
+    Boost::serialization
+    Boost::program_options
 )
 
 # Platform-specific settings

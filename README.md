@@ -1,12 +1,13 @@
-# Game Engine with Raylib, ENet, and EnTT
+# Game Engine with Raylib, ENet, EnTT, and Boost
 
-A C++ game engine that combines the power of [Raylib](https://www.raylib.com/) for graphics, [ENet](http://enet.bespin.org/) for networking, and [EnTT](https://github.com/skypjack/entt) for entity component system (ECS). This project demonstrates how to create a networked game with modern C++ and CMake.
+A C++ game engine that combines the power of [Raylib](https://www.raylib.com/) for graphics, [ENet](http://enet.bespin.org/) for networking, [EnTT](https://github.com/skypjack/entt) for entity component system (ECS), and [Boost](https://www.boost.org/) for additional C++ libraries. This project demonstrates how to create a networked game with modern C++ and CMake.
 
 ## Features
 
 - **Graphics**: Raylib for 2D graphics, input handling, and window management
 - **Networking**: ENet for reliable UDP networking with client-server architecture
 - **ECS**: EnTT for fast and flexible entity component system
+- **Boost Libraries**: Filesystem, Thread, Chrono, Regex, Date/Time, and more
 - **Modern C++**: Uses C++17 features and smart pointers
 - **Cross-platform**: Works on Windows, Linux, and macOS
 - **CMake Build**: Easy to build and configure
@@ -22,6 +23,10 @@ A C++ game engine that combines the power of [Raylib](https://www.raylib.com/) f
 ### Windows (Visual Studio)
 
 ```bash
+# Option 1: Use the provided batch script
+build_with_boost.bat
+
+# Option 2: Manual build
 # Create build directory
 mkdir build
 cd build
@@ -50,6 +55,11 @@ cmake --build .
 ### Linux/macOS
 
 ```bash
+# Option 1: Use the provided shell script
+chmod +x build_with_boost.sh
+./build_with_boost.sh
+
+# Option 2: Manual build
 # Create build directory
 mkdir build
 cd build
@@ -128,6 +138,14 @@ The project automatically downloads and builds these dependencies:
 - **Raylib 5.5**: Modern and easy-to-use game programming library
 - **ENet 1.3.18**: Reliable UDP networking library
 - **EnTT 3.12.2**: Fast and flexible entity component system library
+- **Boost 1.84.0**: Comprehensive C++ libraries including:
+  - **Filesystem**: Cross-platform file system operations
+  - **Thread**: Multi-threading support
+  - **Chrono**: Time utilities and clocks
+  - **Regex**: Regular expressions
+  - **Date/Time**: Date and time manipulation
+  - **Serialization**: Object serialization
+  - **Program Options**: Command line argument parsing
 
 ## Customization
 
@@ -138,6 +156,12 @@ The project automatically downloads and builds these dependencies:
 3. **Networking**: Modify `NetworkManager` to handle new message types
 4. **ECS**: Add new components and systems in `ECS.h` and `ECS.cpp`
 5. **Game Logic**: Add new game mechanics in `Game::Update()`
+6. **Boost Libraries**: Utilize Boost libraries for advanced functionality:
+   - **Filesystem**: File and directory operations
+   - **Thread**: Multi-threading and synchronization
+   - **Chrono**: High-precision timing
+   - **Regex**: Pattern matching and text processing
+   - **Date/Time**: Calendar and time calculations
 
 ### Network Protocol
 
@@ -177,4 +201,5 @@ This project is open source. Feel free to modify and distribute according to you
 - [Raylib](https://www.raylib.com/) - The game programming library
 - [ENet](http://enet.bespin.org/) - The networking library
 - [EnTT](https://github.com/skypjack/entt) - The entity component system library
+- [Boost](https://www.boost.org/) - The C++ libraries collection
 - CMake community for the build system

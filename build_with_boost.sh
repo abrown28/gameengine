@@ -1,17 +1,12 @@
 #!/bin/bash
 
-rm -rf ./build/*
-
-echo "Building Game Engine with Raylib and ENet..."
+echo "Building Game Engine with Boost libraries..."
 
 # Create build directory if it doesn't exist
-if [ ! -d "build" ]; then
-    mkdir build
-fi
+mkdir -p build
 cd build
 
 # Configure with CMake
-echo "Configuring with CMake..."
 cmake .. -DCMAKE_BUILD_TYPE=Release
 if [ $? -ne 0 ]; then
     echo "CMake configuration failed!"
@@ -19,15 +14,11 @@ if [ $? -ne 0 ]; then
 fi
 
 # Build the project
-echo "Building project..."
-make -j$(nproc)
+cmake --build . --config Release
 if [ $? -ne 0 ]; then
     echo "Build failed!"
     exit 1
 fi
 
 echo "Build completed successfully!"
-echo ""
-echo "To run the application:"
-echo "  ./GameEngine"
-echo ""
+echo "Executable location: build/GameEngine"
